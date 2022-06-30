@@ -1,0 +1,36 @@
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.csproj.AssemblyReference.cache
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.Form1.resources
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.csproj.GenerateResource.cache
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.AssemblyInfoInputs.cache
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.AssemblyInfo.cs
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.csproj.CoreCompileInputs.cache
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.exe
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.deps.json
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.runtimeconfig.json
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.dll
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.pdb
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.dll
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\refint\TinyMemFSGUI.dll
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.pdb
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.genruntimeconfig.cache
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\ref\TinyMemFSGUI.dll
+C:\Users\Ariel\Desktop\לימודים\שנה ב'\מערכות הפעלה\הגשה 4\TinyMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.Properties.Resources.resources
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.exe
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.deps.json
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.runtimeconfig.json
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.dll
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\bin\Debug\net6.0-windows\TinyMemFSGUI.pdb
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.csproj.AssemblyReference.cache
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.Form1.resources
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.Properties.Resources.resources
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.csproj.GenerateResource.cache
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.AssemblyInfoInputs.cache
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.AssemblyInfo.cs
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.csproj.CoreCompileInputs.cache
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.dll
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\refint\TinyMemFSGUI.dll
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.pdb
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\TinyMemFSGUI.genruntimeconfig.cache
+C:\Users\Ariel\Desktop\TiniMemFSGUI\TinyMemFSGUI\obj\Debug\net6.0-windows\ref\TinyMemFSGUI.dll
