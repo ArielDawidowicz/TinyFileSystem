@@ -1,53 +1,70 @@
-TintMemFS class – File System
+## TinyMemFS - Thread-Safe In-Memory File System for C#
 
-In this project i built a thread safe file system that stores the content and meta data of multiple files. The main idea is that the content of the files turns into byte arrays, and i saved them in dictionary so that the files are stored in the memory of the process. The system allows to add, remove, copy, rename, compare, encrypt, decrypt, export to disk files, make a list of all the files in the system, export all the data in the system to a single file that can be loaded later and restore the data and meta data. has well the system is able to set files hidden so they won't be visible in the list of the files, and sort the data of system by date created, size in kilobytes decreasing or by name. To encrypt and decrypt the files we used the AES class from System.Security.Cryptography package i made a modification that to encrypt we receive as parameter in Encrypt(string key) function a key(password) and cast the string to byte[32] and sets as a key to a AES object. This allow us to decrypt back the files with the same key and if the key entered is wrong, inform the user. This encryption method allows us to make a 'chain' of encryptions so that if a file is encrypted for example three times so to decrypt the file the user will need all the three keys that were used to encrypt. I save a counter of each file that indicates us if the file was encrypted so if we have encrypted files and then we add a new file and we want to decrypt the files so the new file has not been encrypted yet and we'll know it and we won't try to decrypt it. In the beginning of each function the mutex has to be required so that no one can interrupt the users that are already making any change or reading data from the system, and at the end of the function we release the mutex.
-Properties:
-•	Dictionary<string, byte[]> dataByteArrDict – A dictionary that stores all the conent of the files saved in the file system as byte arrays. [key = file name, value = content of file as byte[].
-•	Dictionary<string, string[]> metaDataDict – A dictionary that stores the meta data of the files in the file system (size in kb, creation time and date) [key = file name, value = {size, creation information}.
+TinyMemFS is a C# project that implements a thread-safe file system capable of storing the content and meta data of multiple files entirely in memory. The core idea is to represent the file content as byte arrays and manage them within a dictionary, enabling efficient in-memory file storage. The system offers a wide range of functionalities, such as adding, removing, copying, renaming, comparing, encrypting, decrypting, and exporting files. It also supports hiding files and sorting the data based on various criteria.
 
-•	Dictionary<string, int> encryptedTimes – A dictionary that stores a counter of how many times each file in the system has been encrypted [key = file name, value = times encrypted].
- 
-•	Dictionary<string, bool> hiddenInfoDict – A dictionary that saves the value of each file in the system to true if the file is 'hidden', else false [key = file name, value = true/false].
+### Features
 
-•	Mutex – A mutex to make the system thread safe.
+- **Thread Safety:** TinyMemFS ensures that concurrent operations do not interfere with each other, providing a robust and secure environment for file manipulation.
 
+- **File Encryption:** Utilizing the AES class from the System.Security.Cryptography package, the system encrypts and decrypts files using a user-provided key. Multiple encryption passes are supported, requiring all encryption keys to be present for successful decryption.
 
-Methods:
-•	public bool add(String fileName, String fileToAdd) – adds the data and meta data of 'filename' that saved in path 'fileToAdd', returns true if the addition was successful.
+- **Meta Data Storage:** Each file's meta data, including size (in kilobytes) and creation time and date, is maintained within the file system.
 
-•	public bool remove(String fileName) – removes 'fileName' content and meta data from the system and return true if the removal was successful, else false.
+- **Hidden Files:** The system allows files to be hidden, making them invisible in file lists.
 
-•	public List<String> listFiles() – return a list of all the files stored in the system in the format – Name: filename, Size : 100kb , Creation date and time: 1-1-2001 14:21:59.
+- **Sorting Options:** The system supports sorting files by name, creation date, and size (in kilobytes).
 
-•	public bool save(String fileName, String fileToAdd) – stores the file in the path 'fileToAdd' as 'fileName' and returns true or false accordingly if the file was saved successfully.
+### Properties
 
-•	public bool encrypt(String key) – encrypts all the file in system according to the key and return true if encryption succeeded ,else false.
+- `Dictionary<string, byte[]> dataByteArrDict`: A dictionary storing file content as byte arrays. (Key = file name, Value = content of file as byte[]).
 
-•	public bool decrypt(String key) – decrypts all the file in the system if the key is the same key that was used to encrypt. If the key is not the same the decryption won't work and returns false.
+- `Dictionary<string, string[]> metaDataDict`: A dictionary storing meta data for each file. (Key = file name, Value = {size, creation information}).
 
-•	public bool saveToDisk(String fileName) – this function makes a single file in format of ".DATA" that stores all the data in the system. (the actually format is a zipfile that stores all the content and meta data of the files in the system).
+- `Dictionary<string, int> encryptedTimes`: A dictionary tracking the number of times each file has been encrypted. (Key = file name, Value = times encrypted).
 
-•	public bool loadFromDisk(String fileName) – loads the information of the files in the data file and returns true if it succeeded.
+- `Dictionary<string, bool> hiddenInfoDict`: A dictionary indicating whether each file is 'hidden' or not. (Key = file name, Value = true/false).
 
-•	public bool setHidden(String fileName, bool hidden) – sets the file 'fileName' to hidden according to the 'hidden' parameter and stores this information in the hiddenInfoDict dictionary.
+- `Mutex`: A mutex ensuring thread safety during file system operations.
 
-•	public bool rename(String fileName, String newFileName) – renames the file 'fileName' to 'newFileName' if 'fileName' is in the system and if 'newFileName' doesn't exist already in the system, otherwise returns false.
+### Methods
 
-•	public bool copy(String fileName1, String fileName2) – this function copy the content and meta data of 'fileName1' if this file exist in the system to a new 'fileName2' file if it doesn't exist in the system and returns true, otherwise returns false.
+- `public bool Add(string fileName, string fileToAdd)`: Adds the content and meta data of the specified file to the system. Returns true if the addition is successful.
 
-•	public void sortByName() – all the files in the system a sorted by alphabetical orded. 
+- `public bool Remove(string fileName)`: Removes the content and meta data of the specified file from the system. Returns true if the removal is successful.
 
-•	public void sortByDate() - all the files in the system a sorted by creation date and time. 
-•	public void sortBySize() - all the files in the system a sorted by size in kilo bytes decreasing. 
+- `public List<string> ListFiles()`: Returns a list of all files stored in the system, formatted as "Name: filename, Size: 100kb, Creation date and time: 1-1-2001 14:21:59."
 
-•	public bool compare(String fileName1, String fileName2) – this function compares to files 'fileName1' and 'fileName2' if they are stored in the system, according to the content of the files.
+- `public bool Save(string fileName, string fileToAdd)`: Stores the specified file from the provided path as 'fileName'. Returns true if the file is successfully saved.
 
-•	public Int64 getSize() – returns the total size of the files in the system in kilobytes.
+- `public bool Encrypt(string key)`: Encrypts all files in the system using the given key. Returns true if encryption is successful, else false.
 
-TinyMemFS GUI: 
+- `public bool Decrypt(string key)`: Decrypts all files in the system if the provided key matches the one used for encryption. Returns false if the key is incorrect.
 
-I built a GUI to this class with windows forms and explained every button in the app. The 
-file of the images is very large so here is a link to the image: 
+- `public bool SaveToDisk(string fileName)`: Saves all data in the system as a single ".DATA" file (in ZIP format) for later retrieval.
+
+- `public bool LoadFromDisk(string fileName)`: Loads file information from the data file and returns true if successful.
+
+- `public bool SetHidden(string fileName, bool hidden)`: Sets the specified file as hidden or unhidden according to the 'hidden' parameter, updating the hiddenInfoDict.
+
+- `public bool Rename(string fileName, string newFileName)`: Renames the specified file to 'newFileName' if 'fileName' exists and 'newFileName' is not already in the system. Returns true on success, otherwise false.
+
+- `public bool Copy(string fileName1, string fileName2)`: Copies the content and meta data of 'fileName1' to 'fileName2' if 'fileName2' does not exist in the system. Returns true if the copy is successful.
+
+- `public void SortByName()`: Sorts all files in the system in alphabetical order.
+
+- `public void SortByDate()`: Sorts all files in the system based on creation date and time.
+
+- `public void SortBySize()`: Sorts all files in the system based on size (in kilobytes) in descending order.
+
+- `public bool Compare(string fileName1, string fileName2)`: Compares the content of 'fileName1' and 'fileName2' if both files exist in the system.
+
+- `public Int64 GetSize()`: Returns the total size of all files in the system in kilobytes.
+
+### TinyMemFS GUI
+
+A user-friendly GUI has been developed using Windows Forms, providing easy access to the TinyMemFS functionalities. For a visual representation, please refer to the following link: [Image Link](your_image_link_here)
+
+Please feel free to explore and use TinyMemFS to manage and manipulate in-memory files securely and efficiently. 
 
 ![TinyMemFSGUI](https://user-images.githubusercontent.com/101277239/176740023-5f08c155-3acd-4b36-ab8c-588d66d0d01c.jpg)
 
